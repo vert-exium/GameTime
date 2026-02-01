@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dqwwa2dr3yytt"]
+
+[node name="gameSelectorScreen" type="Node2D" unique_id=1752322490]
+
+[node name="Control" type="Control" parent="." unique_id=925960035]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 2560.0
+offset_bottom = 1440.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control" unique_id=776817661]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 2496.0
+offset_bottom = 1376.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ScrollContainer" unique_id=617561635]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Control/ScrollContainer/VBoxContainer" unique_id=741955291]
+layout_mode = 2
+text = "Button1"
+
+[node name="Button2" type="Button" parent="Control/ScrollContainer/VBoxContainer" unique_id=824711087]
+layout_mode = 2
+text = "Button2"
+
+[node name="Button3" type="Button" parent="Control/ScrollContainer/VBoxContainer" unique_id=1098303398]
+layout_mode = 2
+text = "Button3"
+
+[node name="Button4" type="Button" parent="Control/ScrollContainer/VBoxContainer" unique_id=1852420033]
+layout_mode = 2
+text = "Button4"

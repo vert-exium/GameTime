@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://gi3h2hyiq8u5"]
+
+[ext_resource type="FontFile" uid="uid://don63n61ubjyo" path="res://assets/fonts/arco/ARCO for OSX.otf" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://bdxpuja8gtai3" path="res://scenes/main_menu.gd" id="1_wu84c"]
+[ext_resource type="Texture2D" uid="uid://ckrfs5b6sik3j" path="res://assets/icons/EnterButton.png" id="2_ekxnf"]
+[ext_resource type="FontFile" uid="uid://d0fwcmk7sfeua" path="res://assets/fonts/alte_haas_grotesk/AlteHaasGroteskBold.ttf" id="3_bqqt6"]
+[ext_resource type="PackedScene" uid="uid://b4w2mchi4y351" path="res://scenes/planet_1.tscn" id="5_8ln24"]
+
+[node name="MainMenu" type="Node2D" unique_id=2074591206]
+script = ExtResource("1_wu84c")
+
+[node name="backRect" type="ColorRect" parent="." unique_id=1033402057]
+offset_right = 2560.0
+offset_bottom = 1440.0
+color = Color(0.9647059, 0.54901963, 0.29803923, 1)
+
+[node name="titleLabel" type="Label" parent="." unique_id=1699678284]
+offset_left = 320.0
+offset_top = 139.0
+offset_right = 2262.0
+offset_bottom = 486.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.7294118)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 14
+theme_override_constants/shadow_offset_y = 17
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 330
+text = "GameTime"
+
+[node name="enterButton" type="TextureButton" parent="." unique_id=155620669]
+offset_left = 954.0
+offset_top = 750.0
+offset_right = 3459.0
+offset_bottom = 2006.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_ekxnf")
+
+[node name="enterLabel" type="Label" parent="." unique_id=379629544]
+offset_left = 1074.0
+offset_top = 791.0
+offset_right = 1482.0
+offset_bottom = 1005.0
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("3_bqqt6")
+theme_override_font_sizes/font_size = 157
+text = "Enter"
+
+[node name="Planet1" parent="." unique_id=203419627 instance=ExtResource("5_8ln24")]
+position = Vector2(178, 1214)
+
+[connection signal="pressed" from="enterButton" to="." method="_on_enter_button_pressed"]
