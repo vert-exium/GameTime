@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://da513gxjtymsw"]
+
+[ext_resource type="Texture2D" uid="uid://b5trdl13oidr" path="res://assets/icons/mainMenu/planet05.png" id="1_hlswr"]
+
+[node name="Planet2" type="CharacterBody2D" unique_id=1121730915]
+
+[node name="Texture" type="TextureRect" parent="." unique_id=1710240740]
+offset_left = -160.0
+offset_top = -160.0
+offset_right = 1120.0
+offset_bottom = 1120.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_hlswr")
