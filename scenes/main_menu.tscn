@@ -2,28 +2,25 @@
 
 [ext_resource type="FontFile" uid="uid://don63n61ubjyo" path="res://assets/fonts/arco/ARCO for OSX.otf" id="1_l6cm7"]
 [ext_resource type="Script" uid="uid://bdxpuja8gtai3" path="res://scenes/main_menu.gd" id="1_wu84c"]
-[ext_resource type="Texture2D" uid="uid://ckrfs5b6sik3j" path="res://assets/icons/EnterButton.png" id="2_ekxnf"]
 [ext_resource type="FontFile" uid="uid://d0fwcmk7sfeua" path="res://assets/fonts/alte_haas_grotesk/AlteHaasGroteskBold.ttf" id="3_bqqt6"]
-[ext_resource type="PackedScene" uid="uid://b4w2mchi4y351" path="res://scenes/planet_1.tscn" id="5_8ln24"]
-[ext_resource type="PackedScene" uid="uid://da513gxjtymsw" path="res://scenes/planet_2.tscn" id="6_rtw2f"]
-[ext_resource type="PackedScene" uid="uid://bas5jyknp07df" path="res://scenes/planet_3.tscn" id="7_jk1qb"]
-[ext_resource type="PackedScene" uid="uid://e3y5flawh7ku" path="res://scenes/planet_4.tscn" id="8_5dd4i"]
-[ext_resource type="PackedScene" uid="uid://ukw5y3ohv73h" path="res://scenes/planet_5.tscn" id="9_lgwnu"]
+[ext_resource type="Texture2D" uid="uid://mdyw347sstj1" path="res://assets/icons/Untitled-1.png" id="3_wu84c"]
+[ext_resource type="Texture2D" uid="uid://cvhvexx1hwt7e" path="res://assets/icons/Untitled-1-Pressed.png" id="4_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://dl8mk5pmkebda" path="res://assets/icons/Untitled-1-Hover.png" id="5_oa1go"]
 
 [node name="MainMenu" type="Node2D" unique_id=2074591206]
 script = ExtResource("1_wu84c")
 
-[node name="backRect" type="ColorRect" parent="." unique_id=1033402057]
+[node name="backColor" type="ColorRect" parent="." unique_id=115580694]
 offset_right = 2560.0
 offset_bottom = 1440.0
-color = Color(0.30966094, 0.07335972, 0.49033648, 1)
+color = Color(0.94509804, 0.2901961, 0.16078432, 1)
 
 [node name="titleLabel" type="Label" parent="." unique_id=1699678284]
 offset_left = 320.0
 offset_top = 139.0
 offset_right = 2262.0
 offset_bottom = 486.0
-theme_override_colors/font_color = Color(0.27469411, 0.27196914, 0.59857124, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.7294118)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 14
@@ -35,55 +32,23 @@ theme_override_font_sizes/font_size = 330
 text = "GameTime"
 
 [node name="enterButton" type="TextureButton" parent="." unique_id=155620669]
-offset_left = 954.0
-offset_top = 750.0
-offset_right = 3459.0
-offset_bottom = 2006.0
+offset_left = 953.0
+offset_top = 1042.0
+offset_right = 3571.0
+offset_bottom = 1994.0
 scale = Vector2(0.25, 0.25)
-texture_normal = ExtResource("2_ekxnf")
+texture_normal = ExtResource("3_wu84c")
+texture_pressed = ExtResource("4_rtw2f")
+texture_hover = ExtResource("5_oa1go")
 
 [node name="enterLabel" type="Label" parent="." unique_id=379629544]
 offset_left = 1074.0
-offset_top = 791.0
+offset_top = 1062.0
 offset_right = 1482.0
-offset_bottom = 1005.0
+offset_bottom = 1276.0
 theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("3_bqqt6")
 theme_override_font_sizes/font_size = 157
 text = "Enter"
 
-[node name="Planet1" parent="." unique_id=203419627 instance=ExtResource("5_8ln24")]
-position = Vector2(309, 1211)
-
-[node name="Planet2" parent="." unique_id=1121730915 instance=ExtResource("6_rtw2f")]
-position = Vector2(2305, 657)
-
-[node name="Planet3" parent="." unique_id=132181728 instance=ExtResource("7_jk1qb")]
-position = Vector2(607, 725)
-
-[node name="Planet4" parent="." unique_id=840166886 instance=ExtResource("8_5dd4i")]
-position = Vector2(163, 281)
-
-[node name="Planet5" parent="." unique_id=26846609 instance=ExtResource("9_lgwnu")]
-position = Vector2(1947, 1209)
-
-[node name="ScaleTimer" type="Timer" parent="." unique_id=33958664]
-wait_time = 8.0
-
-[node name="scaleRNGTimer1" type="Timer" parent="." unique_id=867505570]
-
-[node name="scaleRNGTimer2" type="Timer" parent="." unique_id=1029123665]
-
-[node name="scaleRNGTimer3" type="Timer" parent="." unique_id=618387979]
-
-[node name="scaleRNGTimer4" type="Timer" parent="." unique_id=1595311789]
-
-[node name="scaleRNGTimer5" type="Timer" parent="." unique_id=1663372418]
-
 [connection signal="pressed" from="enterButton" to="." method="_on_enter_button_pressed"]
-[connection signal="timeout" from="ScaleTimer" to="." method="_on_scale_timer_timeout"]
-[connection signal="timeout" from="scaleRNGTimer1" to="." method="_on_scale_rng_timer_1_timeout"]
-[connection signal="timeout" from="scaleRNGTimer2" to="." method="_on_scale_rng_timer_2_timeout"]
-[connection signal="timeout" from="scaleRNGTimer3" to="." method="_on_scale_rng_timer_3_timeout"]
-[connection signal="timeout" from="scaleRNGTimer4" to="." method="_on_scale_rng_timer_4_timeout"]
-[connection signal="timeout" from="scaleRNGTimer5" to="." method="_on_scale_rng_timer_5_timeout"]

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b4qejhllb5u5r"]
+
+[node name="TapTime" type="Node2D" unique_id=556559626]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1037380578]
+offset_right = 2560.0
+offset_bottom = 1440.0
