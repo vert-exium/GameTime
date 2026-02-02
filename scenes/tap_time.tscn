@@ -1,7 +1,58 @@
-[gd_scene format=3 uid="uid://b4qejhllb5u5r"]
+[gd_scene format=3 uid="uid://dvaxa4l3pdr00"]
+
+[ext_resource type="Script" uid="uid://i4ih56f7gjn2" path="res://scripts/tap_time.gd" id="1_53lu6"]
+[ext_resource type="PackedScene" uid="uid://larhfcw6nt0q" path="res://scenes/tap_time_marker.tscn" id="2_4na1s"]
+[ext_resource type="Script" uid="uid://ctkctwus17w7c" path="res://scripts/container.gd" id="2_dut8p"]
+[ext_resource type="Script" uid="uid://1q3t7iyr73n8" path="res://scripts/check_area.gd" id="3_dut8p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4na1s"]
+size = Vector2(256, 256)
 
 [node name="TapTime" type="Node2D" unique_id=556559626]
+script = ExtResource("1_53lu6")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1037380578]
+[node name="backRect" type="ColorRect" parent="." unique_id=1037380578]
 offset_right = 2560.0
 offset_bottom = 1440.0
+color = Color(0.5263037, 0.42649388, 0.9999992, 1)
+metadata/_edit_lock_ = true
+
+[node name="Container" type="Control" parent="." unique_id=1245470818]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 512.0
+offset_top = 768.0
+offset_right = 2048.0
+offset_bottom = 1024.0
+script = ExtResource("2_dut8p")
+
+[node name="BackPanel" type="Panel" parent="Container" unique_id=434331774]
+layout_mode = 0
+offset_right = 1536.0
+offset_bottom = 256.0
+
+[node name="TargetArea" type="ColorRect" parent="Container/BackPanel" unique_id=2128246773]
+layout_mode = 0
+offset_right = 255.99988
+offset_bottom = 256.0
+color = Color(0.14509805, 0.6862745, 0, 1)
+
+[node name="CheckArea" type="Area2D" parent="Container/BackPanel/TargetArea" unique_id=1154075805]
+position = Vector2(0, 1)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("3_dut8p")
+
+[node name="CheckCollision" type="CollisionShape2D" parent="Container/BackPanel/TargetArea/CheckArea" unique_id=1278097827]
+position = Vector2(128, 127)
+shape = SubResource("RectangleShape2D_4na1s")
+
+[node name="Marker" parent="Container" unique_id=865795664 instance=ExtResource("2_4na1s")]
+collision_layer = 3
+collision_mask = 3
+
+[node name="MoveTimer" type="Timer" parent="." unique_id=814560173]
+wait_time = 4.0
+
+[connection signal="area_entered" from="Container/BackPanel/TargetArea/CheckArea" to="Container/BackPanel/TargetArea/CheckArea" method="_on_area_entered"]
+[connection signal="area_exited" from="Container/BackPanel/TargetArea/CheckArea" to="Container/BackPanel/TargetArea/CheckArea" method="_on_area_exited"]

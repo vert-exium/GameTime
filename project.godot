@@ -15,6 +15,11 @@ run/main_scene="uid://gi3h2hyiq8u5"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GlobalVars="*uid://bbtgx5nkmkgjf"
+TapTime="*uid://dvaxa4l3pdr00"
+
 [display]
 
 window/size/viewport_width=2560
@@ -25,6 +30,10 @@ window/stretch/mode="canvas_items"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
+[global_group]
+
+tap_target=""
 
 [physics]
 

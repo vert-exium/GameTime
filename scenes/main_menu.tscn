@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://gi3h2hyiq8u5"]
 
 [ext_resource type="FontFile" uid="uid://don63n61ubjyo" path="res://assets/fonts/arco/ARCO for OSX.otf" id="1_l6cm7"]
-[ext_resource type="Script" uid="uid://bdxpuja8gtai3" path="res://scenes/main_menu.gd" id="1_wu84c"]
+[ext_resource type="Script" uid="uid://bvp3fkwobsctb" path="res://scripts/main_menu.gd" id="1_wu84c"]
 [ext_resource type="FontFile" uid="uid://d0fwcmk7sfeua" path="res://assets/fonts/alte_haas_grotesk/AlteHaasGroteskBold.ttf" id="3_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://mdyw347sstj1" path="res://assets/icons/Untitled-1.png" id="3_wu84c"]
 [ext_resource type="Texture2D" uid="uid://cvhvexx1hwt7e" path="res://assets/icons/Untitled-1-Pressed.png" id="4_rtw2f"]

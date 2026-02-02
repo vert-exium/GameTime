@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://larhfcw6nt0q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xpxx5"]
+size = Vector2(64, 256)
+
+[node name="TapTimeMarker" type="CharacterBody2D" unique_id=1114442275 groups=["tap_target"]]
+
+[node name="Color" type="ColorRect" parent="." unique_id=1011484440 groups=["tap_target"]]
+offset_right = 64.0
+offset_bottom = 256.0
+color = Color(0.9639041, 0.12906647, 1.92523e-07, 1)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2146752941]
+
+[node name="Collision" type="CollisionShape2D" parent="Area2D" unique_id=1206648601 groups=["tap_target"]]
+position = Vector2(32, 128)
+shape = SubResource("RectangleShape2D_xpxx5")
