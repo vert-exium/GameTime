@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GlobalVars="*uid://bbtgx5nkmkgjf"
 TapTime="*uid://dvaxa4l3pdr00"
+Taptimevariables="*uid://dic4xd4lrthdj"
 
 [display]
 

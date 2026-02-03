@@ -12,6 +12,7 @@ func _input(event: InputEvent):
 	if event.is_action_pressed("ui_accept"):
 		if in_target:
 			print("HIT")
-			#TapTime.round += 1
+			Taptimevariables.roundNum += 1
+			Taptimevariables.randomizeRnd = true
 		else:
 			print("MISS")
