@@ -9,8 +9,7 @@ func _ready():
 	startRound()
 func startRound():
 	Cont.position.x = posRNG.randf_range(0, 1280)
-	#GlobalContainer.taptimeSpeed += 1
-
+	Taptimevariables.speed += 1
 func _process(delta: float):
 	print(str(Taptimevariables.randomizeRnd))
 	if Taptimevariables.randomizeRnd == true:

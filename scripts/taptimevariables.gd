@@ -4,3 +4,4 @@ extends Node
 
 var roundNum = 0
 var randomizeRnd = false
+var speed = 2
